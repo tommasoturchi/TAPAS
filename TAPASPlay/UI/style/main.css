@@ -1,0 +1,152 @@
+:root {
+    --main-circle-dim: 250px;
+    --main-circle-radius: 125px;
+    
+    --smaller-circle-height: 14px;
+    --smaller-circle-width: 22px;
+    --smaller-circle-width-minus-two: 20px;
+    --smaller-circle-radius: 14px;
+    
+    --triangle-height: 20px;
+    --triangle-half-height: 10px;
+    --triangle-height-plus-one: 21px;
+    --triangle-height-minus-one: 19px;
+    --triangle-height-minus-two: 18px;
+    --triangle-base: 22px;
+    --triangle-half-base: 11px;
+    --triangle-half-base-plus-one: 12px;
+    --triangle-half-base-minus-one: 10px;
+    --triangle-half-base-minus-two: 9px;
+    --triangle-pieces-border-width: 4px; /* derives from triangle-base - 2*(border-left + border-right) */
+    --triangle-sides-width: 2px; /* half of --triangle-pieces-border-width */
+    
+    --end-piece-height: 30px;
+    --end-piece-base: 44px;
+    --end-piece-half-base: 22px;
+    
+    --square-width: 22px;
+    --square-height: 14px;
+    --square-border-radius: 4px;
+}
+
+
+ 
+
+.main_circle {
+    z-index: 15;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    width: var(--main-circle-dim);
+    height: var(--main-circle-dim);
+    -webkit-border-radius: var(--main-circle-radius);
+    -moz-border-radius: var(--main-circle-radius);
+    border-radius: var(--main-circle-radius);
+    border: var(--halo-border-width) solid;
+}
+
+
+.round_piece {
+    position: absolute;
+    width: var(--smaller-circle-width);
+    height: var(--smaller-circle-height);
+    z-index: 20;
+    -webkit-border-radius: var(--smaller-circle-radius) var(--smaller-circle-radius) 0 0;
+    -moz-border-radius: var(--smaller-circle-radius) var(--smaller-circle-radius) 0 0;
+    border-radius: var(--smaller-circle-radius) var(--smaller-circle-radius) 0 0;
+    border: var(--border-width) solid;
+    background: var(--main-color);
+}
+
+
+.left_side_round_piece{
+    background: #e1e2e3;
+    border-radius: var(--smaller-circle-radius) 0 0 0;
+    -moz-border-radius: var(--smaller-circle-radius) 0 0 0;
+    -webkit-border-radius: var(--smaller-circle-radius) 0 0 0;
+}
+
+.right_side_round_piece{
+    background: #b8b8b8;
+    margin: 0px;
+    border-radius: 0 var(--smaller-circle-radius) 0 0;
+    -moz-border-radius: 0 var(--smaller-circle-radius) 0 0;
+    -webkit-border-radius: 0 var(--smaller-circle-radius) 0 0;    
+}
+
+.left_side_square_piece{
+    background: #e1e2e3;
+    border-radius: var(--square-border-radius) 0 0 0;
+}
+
+.right_side_square_piece{
+    background: #b8b8b8;
+    border-radius: 0 var(--square-border-radius) 0 0;
+    margin: 0px;    
+}
+
+.left_side_triangular_piece{
+    height: 0px;
+    width: var(--triangle-sides-width);
+    opacity: var(--left-opacity);
+    border-left: var(--triangle-half-base-minus-two) solid transparent;
+    border-bottom: var(--triangle-height) solid var(--left-colour);;
+}
+
+.right_side_triangular_piece{
+    height: 0px;
+    width: var(--triangle-sides-width);
+    opacity: var(--right-opacity);
+    margin: 0px;    
+    border-right: var(--triangle-half-base-minus-two) solid transparent;
+    border-bottom: var(--triangle-height) solid var(--right-colour);;
+}
+
+.left_side_end_piece{
+    opacity: var(--left-opacity);
+    border-left: var(--end-piece-half-base) solid transparent;
+    border-bottom: var(--end-piece-height) solid var(--left-colour);;
+}
+
+.right_side_end_piece{
+    opacity: var(--right-opacity);
+    margin: 0px;    
+    //border-left: var(--triangle-half-base-minus-two) solid transparent;
+    border-right: var(--end-piece-half-base) solid transparent;
+    border-bottom: var(--end-piece-height) solid var(--right-colour);;
+}
+
+.triangular_pieces_border {
+    position: absolute;
+    width: var(--triangle-pieces-border-width);
+    height: 0px;
+    z-index: 20;
+    border-left: var(--triangle-half-base-minus-two) solid transparent;
+    border-right: var(--triangle-half-base-minus-two)solid transparent;
+    border-bottom: var(--triangle-height) solid;
+}
+
+.end_piece {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    z-index: 20;
+    border-left: var(--end-piece-half-base) solid transparent;
+    border-right: var(--end-piece-half-base)solid transparent;
+    border-bottom: var(--end-piece-height) solid;
+}
+
+.square_piece{
+    position: absolute;
+    width: var(--square-width);
+    height: var(--square-height);
+    z-index: 20;
+    border-top: var(--border-width) solid;
+    border-right: var(--border-width) solid;
+    border-left: var(--border-width) solid;
+    border-radius: var(--square-border-radius) var(--square-border-radius) 0 0;
+}
+
+.fitting_piece_container{
+    position: absolute;
+}

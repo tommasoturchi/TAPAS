@@ -1,0 +1,36 @@
+:root{
+    --triangular-fitting-rectangle-width-minus-four: 40px;
+    --triangular-fitting-rectangle-width-minus-two: 42px;
+    --triangular-fitting-rectangle-width-divided-by-four: 11px;
+    --shadow-for-diagonal-bar: rgba(200, 200, 200,1);
+}
+
+.background_inner_triangle{
+    position: absolute;
+    z-index: 12;
+    bottom: 1px;
+    left: 0px;
+    content:'';
+    display:block;
+    width: var(--triangle-pieces-border-width);
+    border-left: var(--triangle-half-base-minus-two) solid transparent;
+    border-right: var(--triangle-half-base-minus-two) solid transparent;
+    border-bottom: var(--triangle-height-minus-one) solid transparent;
+    border-bottom-color: #3EB9D7;
+    position: absolute;
+    bottom: -1px;
+    left: var(--triangular-fitting-rectangle-width-divided-by-four);
+}
+
+
+.fitting_piece_bottom_borders{
+    position: absolute;
+    z-index: 12;
+    width: var(--triangular-fitting-rectangle-width-minus-two);
+    height: 1px;
+    background: #3EB9D7;
+    left: 1px;
+    bottom: 0px;
+    /*border-left: var(--border-width) solid;
+    border-right: var(--border-width) solid;*/
+} 

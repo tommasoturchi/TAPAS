@@ -1,0 +1,14 @@
+:root{
+    --fitting-rectangle-width-minus-seven: 37px;
+}
+
+.inside_fitting_square{
+    position: absolute;
+    z-index: 11;
+    background: #3EB9D7;
+    bottom: 0px;
+    border-top: var(--border-width) solid;
+    border-right: var(--border-width) solid;
+    border-left: var(--border-width) solid; 
+    border-radius: var(--square-border-radius) var(--square-border-radius) 0 0;
+}

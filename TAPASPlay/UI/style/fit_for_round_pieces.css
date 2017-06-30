@@ -1,0 +1,37 @@
+:root {
+    --fitting-rectangle-height: 57px;
+    --fitting-rectangle-width: 44px;
+    
+    --round-part-radius: 22px;
+    --round-part-width: 22px;
+    --round-part-height: 14px;
+    //--height-difference: 38px;
+    
+    --rounded-shadow-blur: 2px;
+    --three-side-size-of-shadow: 2px;
+    --side-shadow-blur: 1px;
+    --negative-side-shadow-blur: -1px;
+}
+
+.fitting_rectangle{
+    position: absolute;
+    z-index: 10;
+    width: var(--fitting-rectangle-width);
+    height: var(--fitting-rectangle-height);
+    left: 0px;
+    border-style: solid;
+    border-width: var(--border-width) var(--border-width) 0 var(--border-width);
+}
+    
+.fitting_round_part{
+    position: absolute;
+    width: var(--round-part-width);
+    height: var(--round-part-height);
+    -webkit-border-radius: var(--smaller-circle-radius) var(--smaller-circle-radius) 0 0;
+    -moz-border-radius: var(--smaller-circle-radius) var(--smaller-circle-radius) 0 0;
+    //border-radius: var(--smaller-circle-radius) var(--smaller-circle-radius) 0 0;
+    border-radius: var(--round-part-radius) var(--round-part-radius) 0 0;
+    border-style: solid;
+    border-width: var(--border-width) var(--border-width) 0 var(--border-width);
+    background: #3EB9D7;
+}
